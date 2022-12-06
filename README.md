@@ -7,6 +7,8 @@ conda create -n nama_env python=3.7.15
 ```
 * Clone repositories : https://github.com/riswan29/depth-G.git
 
+* Download yolov3.weight : https://drive.google.com/file/d/1HX62CMSWhkX4Hoi148LKhyGvzqyepNdP/view?usp=sharing
+
 * ketik 
 
 ```
@@ -28,9 +30,10 @@ sudo apt-get install ffmpeg
 <p>Dan jika anda menggunakan Windows anda perlu mendownload file tambahan yaitu </p>
 Link :
 
-```
- https://drive.google.com/file/d/1EKWSDmn46sw4Y-wepxMzaNNHdcwwsYoR/view?usp=sharing, https://drive.google.com/file/d/1GDSTA1NtE8XBpxHpydb93hC44Yn9RirI/view?usp=sharing, https://drive.google.com/file/d/1kUyh1vCL56uu9gaAHL6ZZnfzPqFmfxPr/view?usp=sharing
-```
+ * https://drive.google.com/file/d/1EKWSDmn46sw4Y-wepxMzaNNHdcwwsYoR/view?usp=sharing
+ * https://drive.google.com/file/d/1GDSTA1NtE8XBpxHpydb93hC44Yn9RirI/view?usp=sharing
+ * https://drive.google.com/file/d/1kUyh1vCL56uu9gaAHL6ZZnfzPqFmfxPr/view?usp=sharing
+
 
 
 ## Anggota Depth-G 
