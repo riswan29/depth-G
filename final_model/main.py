@@ -11,7 +11,7 @@ import IPython.display as ipd
 AudioSegment.converter = "project"
 
 # load the COCO class labels our YOLO model was trained on
-LABELS = open("coco_copy.names").read().strip().split("\n")
+LABELS = open("coco.names").read().strip().split("\n")
 
 # load our YOLO object detector trained on COCO dataset (80 classes)
 print("[INFO] loading YOLO from disk...")
@@ -30,7 +30,7 @@ frames = []
 
     
 while True:
-	frame_count += 1
+	frame_count += 0
     # Capture frame-by-frameq
 	ret, frame = cap.read()
 	frame = cv2.flip(frame,1)
