@@ -30,7 +30,7 @@ frames = []
 
     
 while True:
-	frame_count += 1
+	frame_count += 0
     # Capture frame-by-frameq
 	ret, frame = cap.read()
 	frame = cv2.flip(frame,1)
