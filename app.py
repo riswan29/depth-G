@@ -3,6 +3,7 @@ import cv2
 import time
 import pickle
 import numpy as np
+import subprocess
 from pydub import AudioSegment
 import IPython.display as ipd
 from gtts import gTTS 
@@ -23,13 +24,14 @@ ln = net.getLayerNames()
 ln = [ln[i - 1] for i in net.getUnconnectedOutLayers()]
 
 # initialize
-cap = cv2.VideoCapture(0)
-frame_count = 0
-start = time.time()
-first = True
-frames = []
+
 def gen_frames():  # generate frame by frame from camera
     #function about gen_frame
+    cap = cv2.VideoCapture(-1)
+    frame_count = 0
+    start = time.time()
+    first = True
+    frames = []
     while True:
         frame_count += 0
         # Capture frame-by-frameq
