@@ -11,11 +11,11 @@ import IPython.display as ipd
 AudioSegment.converter = "project"
 
 # load the COCO class labels our YOLO model was trained on
-LABELS = open("coco_copy.names").read().strip().split("\n")
+LABELS = open("coco.names").read().strip().split("\n")
 
 # load our YOLO object detector trained on COCO dataset (80 classes)
 print("[INFO] loading YOLO from disk...")
-net = cv2.dnn.readNetFromDarknet("yolov3.cfg", "yolov3.weights")
+net = cv2.dnn.readNetFromDarknet("yolov4.cfg", "yolov4.weights")
 
 # determine only the *output* layer names that we need from YOLO
 ln = net.getLayerNames()
