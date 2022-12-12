@@ -1,6 +1,8 @@
+python==3.8
+flask==2.2.2
 gTTS==2.3.0
 imutils==0.5.4
-ipython==7.34.0
-numpy==1.21.6
+ipython==8.7.0
+numpy==1.23.5
 opencv-python==4.6.0.66
 pydub==0.25.1
