@@ -1,37 +1,317 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
+    <meta name="author" content="templatemo">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-        
-    <title>Live Streaming Demonstration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>Depth-G Tugas Akhir</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename = 'vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/templatemo-liberty-market.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'assets/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'https://unpkg.com/swiper@7/swiper-bundle.min.css') }}" />
 </head>
-<body style="background-color: #F8F9F9;">
-    <!--   Header -->
-    <div class="d-flex justify-content-between align-items-center px-5 py-3">
-        <div>
-            <!-- <img src={{ url_for('static', filename="images/orbit.png" ) }} height="50" width="auto"> -->
-        </div>
-        <h1>Motion Detection - Computer Vision</h1>
-        <div>
-            <!-- <img src={{ url_for('static', filename="images/kampus-merdeka.png" ) }} height="50" width="auto"> -->
+
+<body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </div>
-    <!-- Header End  -->
-    <div class="container-fluid my-5">
-        <div class="row">
-            <div class="col-lg-8  offset-lg-2">
-                <img src="{{ url_for('video_feed') }}" width="100%">
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="{{ url_for('static', filename = 'assets/images/icon/test.png' ) }}" alt="">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="index.html" class="active">Beranda</a></li>
+                            <li><a href="{{ url_for('eksplore')}}">Tentang</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="header-text">
+                        <h6>Depth-G</h6>
+                        <h2>Artificial Intelligence becomes your second eye</h2>
+                        <p>Depth-G adalah sebuah platform yang berbasis kecerdasan buatan , berfokus pada Computer
+                            Vision untuk membantu tunanetra</p>
+                        <div class="buttons">
+                            <div class="border-button">
+                                <a href="{{url_for('video_feed')}}">Coba Aplikasi</a>
+                            </div>l
+                            <div class="main-button">
+                                <a href="https://youtube.com/templatemo" target="_blank">Cara penggunaan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="owl-banner owl-carousel">
+                        <div class="item">
+                            <img src="{{ url_for('static', filename = 'assets/images/banner-01.png' ) }}" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="{{ url_for('static', filename = 'assets/images/banner-02.png' ) }}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <div class="categories-collections">
+        <div class="container ">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="categories">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-heading">
+                                    <div class="line-dec"></div>
+                                    <h2>The <em>Tools</em> We Use.</h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="{{ url_for('static', filename = 'assets/images/icon/python.png' ) }}" alt="">
+                                    </div>
+                                    <h4>Python</h4>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="{{ url_for('static', filename = 'assets/images/icon/html-5.png' ) }}" alt="">
+                                    </div>
+                                    <h4>Html</h4>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="{{ url_for('static', filename = 'assets/images/icon/css-3.png' ) }}" alt="">
+                                    </div>
+                                    <h4>Css</h4>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="{{ url_for('static', filename = 'assets/images/icon/bootstrap.png' ) }}" alt="">
+                                    </div>
+                                    <h4>Bootstrap</h4>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="{{ url_for('static', filename = 'assets/images/icon/letter-n.png' ) }}" alt="">
+                                    </div>
+                                    <h4>Ngorox</h4>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-6">
+                                <div class="item">
+                                    <div class="icon">
+                                        <img src="{{ url_for('static', filename = 'assets/images/icon/camera.png' ) }}" alt="">
+                                    </div>
+                                    <h4>Camera</h4>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="collections">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-heading">
+                                    <div class="line-dec"></div>
+                                    <h2>Anggota <em>Depth-G</em></h2>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="owl-collection owl-carousel">
+                                    <div class="item">
+                                        <img src="{{ url_for('static', filename = 'assets/images/collection-01.jpg' ) }}" alt="">
+                                        <div class="down-content">
+                                            <h4>Fransiskus Riswan Indra Simbolon</h4>
+                                            <span class="collection">Rules<br><strong>Modeling &
+                                                    Deployment</strong></span>
+                                            <span class="category">Universitas:<br><strong>Universitas
+                                                    Efarina</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ url_for('static', filename = 'assets/images/collection-01.jpg' ) }}" alt="">
+                                        <div class="down-content">
+                                            <h4>Arza Muhammad Prihandoyo</h4>
+                                            <span class="collection">Rules<br><strong>Modeling &
+                                                    Deployment</strong></span>
+                                            <span class="category">Universitas:<br><strong>Universitas Sumatera
+                                                    Utara</strong></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ url_for('static', filename = 'assets/images/collection-01.jpg' ) }}" alt="">
+                                        <div class="down-content">
+                                            <h4>Exelindo Yeremia</h4>
+                                            <span class="collection">Rules<br><strong>Data Exploration</strong></span>
+                                            <span class="category">Universitas:<br><strong>Universitas Sumatera
+                                                    Utara</strong></span>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ url_for('static', filename = 'assets/images/collection-01.jpg' ) }}" alt="">
+                                        <div class="down-content">
+                                            <h4>Indah Husnul Khotimah</h4>
+                                            <span class="collection">Rules<br><strong>Data Acquisition</strong></span>
+                                            <span class="category">Universitas:<br><strong>Universitas Bina Darma</strong></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <img src="{{ url_for('static', filename = 'assets/images/collection-01.jpg' ) }}" alt="">
+                                        <div class="down-content">
+                                            <h4>Annisa Ramadhani</h4>
+                                            <span class="collection">Rules<br><strong>Problem Scoping</strong></span>
+                                            <span class="category">Universitas:<br><strong>Universitas
+                                                    <br>Riau</strong></span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <div class="create-nft">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h2>Fitur Aplikasi</h2>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="main-button">
+                        <a href="create.html">Coba Aplikasi</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item first-item">
+                        <div class="number">
+                            <h6>1</h6>
+                        </div>
+                        <div class="icon">
+                            <img src="{{ url_for('static', filename = 'assets/images/icon/focus.png' ) }}" alt="">
+                        </div>
+                        <h4>Kamera Pendeteksi</h4>
+                        <p>Kamera pendeteksi berfungsi sebagai alat untuk memproses inputan yang berupa gambar dan mengenali objek yang ditangkap </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item second-item">
+                        <div class="number">
+                            <h6>2</h6>
+                        </div>
+                        <div class="icon">
+                            <img src="{{ url_for('static', filename ='assets/images/icon/sound.png' ) }}" alt="">
+                        </div>
+                        <h4>Suara</h4>
+                        <p>Suara berfungsi sebagai output dari objek yang ditangkap oleh kamera</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="item">
+                        <div class="icon">
+                            <img src="{{ url_for('static', filename ='assets/images/icon/letter-y.png' ) }}" alt="">
+                        </div>
+                        <h4>Yolo V4</h4>
+                        <p><a rel="nofollow"
+                                href="https://machinelearning.mipa.ugm.ac.id/2018/08/05/yolo-you-only-look-once/" target="_parent">Yolo</a> adalah suatu algoritma yang mempunyai kemampuan untuk melakukan deteksi objek secara berkala</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          <span style="color: white ;" >© 2020 Copyright:
+          <a class="text-white">Depth-G</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename = 'vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename = 'assets/js/isotope.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'assets/js/owl-carousel.js') }}"></script>
+
+    <script src="{{ url_for('static', filename = 'assets/js/tabs.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'assets/js/popup.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'assets/js/custom.js') }}"></script>
+
 </body>
+
 </html>
