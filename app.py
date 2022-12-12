@@ -143,6 +143,12 @@ def index():
     """Video streaming home page."""
     return render_template('index.html')
 
+@app.route('/step')
+def step():
+    """Video streaming home page."""
+    return render_template('step.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
