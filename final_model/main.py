@@ -15,7 +15,7 @@ LABELS = open("coco.names").read().strip().split("\n")
 
 # load our YOLO object detector trained on COCO dataset (80 classes)
 print("[INFO] loading YOLO from disk...")
-net = cv2.dnn.readNetFromDarknet("yolov4.cfg", "yolov4.weights")
+net = cv2.dnn.readNetFromDarknet("yolov3.cfg", "yolov3.weights")
 
 # determine only the *output* layer names that we need from YOLO
 ln = net.getLayerNames()
@@ -30,7 +30,7 @@ frames = []
 
     
 while True:
-	frame_count += 0
+	frame_count = 0
     # Capture frame-by-frameq
 	ret, frame = cap.read()
 	frame = cv2.flip(frame,1)
