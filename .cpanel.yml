@@ -1,0 +1,5 @@
+---
+deployment: 
+tasks: 
+- export DEPLOYPATH=/home/u1733802/depth-G 
+- bin/cp -r * $DEPLOYPATH
